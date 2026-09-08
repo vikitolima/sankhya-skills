@@ -1,0 +1,74 @@
+# AGENTS.md
+
+## Projeto
+
+**Nome:** [NOME DO PROJETO]
+
+**Objetivo:**
+[Descreva em poucas linhas o objetivo deste projeto.]
+
+## Contexto funcional
+
+[Explique resumidamente qual processo do Sankhya este projeto atende.]
+
+## Principais objetos
+
+### Tabelas padrão Sankhya
+
+* `[TABELA]` — [finalidade]
+* `[TABELA]` — [finalidade]
+
+### Tabelas adicionais
+
+* `[AD_TABELA]` — [finalidade]
+* `[AD_TABELA]` — [finalidade]
+
+### Procedures / Functions / Triggers
+
+* `[OBJETO]` — [finalidade]
+* `[OBJETO]` — [finalidade]
+
+## Regras de negócio importantes
+
+* [Regra 1]
+* [Regra 2]
+* [Regra 3]
+
+## Fluxo principal
+
+```text
+[Origem]
+    ↓
+[Etapa 1]
+    ↓
+[Etapa 2]
+    ↓
+[Resultado]
+```
+
+## Cuidados específicos
+
+* [Limitação ou cuidado importante]
+* [Regra de reprocessamento]
+* [Regra transacional]
+* [Dependência com outro processo]
+
+## Estrutura do projeto
+
+```text
+[Pasta]
+├── procedures/
+├── functions/
+├── triggers/
+├── queries/
+└── scripts/
+```
+
+## Orientação ao alterar este projeto
+
+Antes de alterar uma regra existente:
+
+1. procure onde o objeto é utilizado;
+2. verifique dependências com outros objetos deste projeto;
+3. preserve regras de negócio documentadas neste arquivo;
+4. sinalize quando uma alteração puder afetar outros fluxos.

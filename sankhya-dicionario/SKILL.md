@@ -132,7 +132,7 @@ TGFPAR (CODPARC)
 | Campo | Tabela | Tipo | Valores |
 |-------|--------|------|---------|
 | STATUSNOTA | TGFCAB | String | `L`=Liberada, `A`=Atendimento, `P`=Pendente |
-| TIPMOV | TGFCAB | String | `V`=Venda, `C`=Compra, `K`=Ped.Transf., `O`=Ped.Compra, `Q`=Requisição, `L`=Dev.Requisição |
+| TIPMOV | TGFCAB | String | `V`=Venda, `C`=Compra, `K`=Ped.Transf., `O`=Ped.Compra, `Q`=Requisição, `L`=Dev.Requisição,  `P`=Ped. Venda|
 | RECDESP | TGFFIN | Integer | `1`=Receita, `-1`=Despesa |
 | PROVISAO | TGFFIN | String | `S`=Provisão, `N`=Normal |
 | TIPNAT | TGFNAT | String | `R`=Receita, `D`=Despesa |

@@ -93,6 +93,11 @@ Skills funcionais já em uso interno, sendo polidas para release público:
 | `sankhya-construtor-telas` | Telas customizadas via `metadata.xml`, import path correto | 🟡 Em revisão |
 | `sankhya-ajuda-online` | Consulta a `ajuda.sankhya.com.br` via web search | 🟡 Em revisão |
 
+A base HTML5 está em [skill-html5.md](skill-html5.md), agora com orientação para
+componentes SankhyaJS/AngularJS a partir do BI-SankhyaJS. Consulte a
+[referência técnica](references/bi_sankhyajs.md) para escolher entre entidade e
+standalone, adaptar dependências e planejar a homologação no ERP.
+
 ---
 
 ## 🚀 Como instalar

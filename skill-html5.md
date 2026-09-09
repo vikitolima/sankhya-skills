@@ -1,19 +1,11 @@
 ---
 name: sankhya-dashboard-html5
 description: >
-  Conhecimento completo sobre como criar dashboards HTML5 (gadgets) no ERP Sankhya.
-  Cobre a estrutura do XML de configuracao, criacao de JSPs com snk:query, prompt-parameters,
-  empacotamento em ZIP, deploy via Upload Pacote HTML, taglibs disponiveis, API JavaScript nativa
-  (executeQuery, openLevel, refreshDetails, openApp, openPage), parametros entity/singleList/multiList,
-  drill-down via modal+executeQuery, export CSV client-side, XMLTABLE para parsing de XML de notas,
-  e todas as armadilhas e workarounds descobertos na pratica (ORA-00920, datas, multiList, encoding,
-  Internal Server Error em Level 2, openLevel que nao passa parametros).
-  Use esta skill SEMPRE que o usuario pedir para criar, modificar ou debugar um gadget HTML5 no Sankhya,
-  ou mencionar: dashboard Sankhya, gadget HTML5, snk:query, componente HTML5, tdb_dashboard.xml,
-  Upload Pacote HTML, openLevel, refreshDetails, executeQuery, prompt-parameters, ou qualquer referencia
-  a criacao de telas customizadas dentro do Sankhya via JSP/HTML5.
-  Tambem use quando o usuario mencionar erros como "Internal Server Error" em gadgets,
-  "setObject em PreparedStatement", "param -> null", ou problemas com datas em queries Sankhya.
+  Criar, modificar e depurar dashboards e componentes BI HTML5/JSP no Sankhya.
+  Use para snk:query, XML de gadget, prompt-parameters, executeQuery, openLevel,
+  refreshDetails, empacotamento ZIP e erros de datas ou carregamento em gadgets.
+  Inclui adaptacao do BI-SankhyaJS com SankhyaJS/AngularJS, sk-dynaform,
+  sk-dataset e sk-datagrid. Nao substitui o Construtor de Telas via metadata.xml.
 ---
 
 # Sankhya Dashboard HTML5 - Guia Completo
@@ -24,8 +16,27 @@ Baseado em experiencia real de desenvolvimento e debugging iterativo.
 > **IMPORTANTE:** Leia este arquivo inteiro antes de escrever qualquer codigo.
 > As armadilhas documentadas aqui foram descobertas com horas de debugging.
 
-**Versao:** 2.0.0
-**Ultima atualizacao:** 2026-05-22
+**Versao:** 2.1.0
+**Ultima atualizacao:** 2026-09-09
+
+## Escolha do modelo e referencias
+
+Para dashboards com indicadores, graficos e consultas JSP, use o fluxo nativo das secoes abaixo.
+Para grades e formularios com componentes SankhyaJS/AngularJS dentro de um componente BI,
+consulte a referencia comunitaria antes de adaptar o template:
+
+| Reference | Carregar quando |
+|---|---|
+| [bi_sankhyajs.md](references/bi_sankhyajs.md) | Uso de BI-SankhyaJS, sk-dynaform, sk-dataset, sk-datagrid, bootstrap AngularJS ou JX.removerFrame |
+
+O BI-SankhyaJS tem bootstrap e empacotamento proprios. As regras de JSP com `snk:load`,
+XML de gadget e deploy abaixo descrevem o fluxo nativo; nao devem ser aplicadas
+automaticamente ao template AngularJS. A referencia distingue codigo observado de
+recomendacoes de adaptacao e ainda requer homologacao na versao de destino.
+
+Para SQL, consulte `sankhya-dicionario` antes de usar tabelas/campos; para regras de negocio,
+consulte `sankhya-funcionamento`. Esta skill nao substitui essas consultas nem o fluxo de
+Construtor de Telas via `metadata.xml`.
 
 ---
 
@@ -571,4 +582,5 @@ Nao usar acentos em comentarios `--` dentro do snk:query. Usar ASCII puro ou com
 | Versao | Data | Mudanca |
 |---|---|---|
 | 1.0.0 | 2026-05-19 | Versao inicial |
+| 2.1.0 | 2026-09-09 | Referencia comunitaria BI-SankhyaJS: selecao entidade/standalone, bootstrap, dependencias, adaptacao para consulta e homologacao; distingue este modelo do fluxo nativo |
 | 2.0.0 | 2026-05-22 | API JS nativa (executeQuery, openLevel, refreshDetails, openApp, openPage), parametros entity/singleList com item estatico, padrao modal+executeQuery para drill-down, XMLTABLE com subquery+LEFT JOIN, export CSV client-side, padrao JSON via JSTL, gotchas openLevel/args Internal Server Error, snk:query dentro de c:if, TO_NUMBER em XML, acumulacao EL |

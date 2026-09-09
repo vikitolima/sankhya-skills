@@ -138,6 +138,10 @@ Contribuições são bem-vindas! Se você tem conhecimento sobre módulos não c
 
 ## 📋 Roadmap
 
+A base em revisão [skill-html5.md](skill-html5.md) incorpora orientação para grades e
+formulários BI-SankhyaJS, com [referência técnica e origem](references/bi_sankhyajs.md).
+Os modelos comunitários ainda precisam de homologação na versão Sankhya de destino.
+
 - [ ] sankhya-api — autenticação e endpoints da API REST
 - [ ] sankhya-html5 — criação de telas e relatórios no HTML5
 - [ ] sankhya-fiscal — obrigações acessórias, SPED, NF-e
